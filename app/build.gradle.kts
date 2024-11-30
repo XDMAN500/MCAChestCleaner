@@ -13,6 +13,7 @@ plugins {
 repositories {
     // Use Maven Central for resolving dependencies.
     mavenCentral()
+    maven("https://jitpack.io/")
 }
 
 dependencies {
@@ -23,6 +24,7 @@ dependencies {
 
     // This dependency is used by the application.
     implementation(libs.guava)
+    implementation("com.github.Querz:NBT:6.1")
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
@@ -34,7 +36,7 @@ java {
 
 application {
     // Define the main class for the application.
-    mainClass = "org.example.App"
+    mainClass = "me.varmetek.chestcleaner.App"
 }
 
 tasks.named<Test>("test") {
